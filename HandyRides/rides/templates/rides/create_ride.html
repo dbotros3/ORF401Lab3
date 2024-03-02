@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post" action="{% url 'rides:create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create Ride">
+</form>
+{% endblock %}

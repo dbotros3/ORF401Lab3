@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div class="main">
+  <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+          <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              <th>Origination City</th>
+              <th>Origination State</th>
+              <th>Destination City</th>
+              <th>Destination State</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Taking Passengers</th>
+              <th>Seats Available</th>
+              <th>Email Address</th>
+              <th>Vehicle Type</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for person in people %}
+          <tr>
+              <td>{{ person.first_name }}</td>
+              <td>{{ person.last_name }}</td>
+              <td>{{ person.age }}</td>
+              <td>{{ person.origination_city }}</td>
+              <td>{{ person.origination_state }}</td>
+              <td>{{ person.destination_city }}</td>
+              <td>{{ person.destination_state }}</td>
+              <td>{{ person.date }}</td>
+              <td>{{ person.time }}</td>
+              <td>{{ person.taking_passengers }}</td>
+              <td>{{ person.seats_available }}</td>
+              <td>{{ person.email_address }}</td>
+              <td>{{ person.vehicle_type }}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+<div class="my-4">
+    <form action="{% url 'rides:index' %}" method="get" onsubmit="return checkForm();" class="form-inline justify-content-center">
+        {{ form.as_p }}
+        <input type="submit" value="Submit" class="btn btn-primary ml-2">
+    </form>
+</div>
+
+
+ <!-- <form action="{% url 'rides:create' %}" method="post">
+    {% csrf_token%}
+    {{new_ride_form}}
+    <input type="submit" value="Submit">
+</form> -->
+
+{% endblock %}
