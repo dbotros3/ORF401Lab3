@@ -13,7 +13,7 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Adjust this as necessary */
+    justify-content: flex-start; /* Adjust this as necessary */
     min-height: 100vh;
 }
 
