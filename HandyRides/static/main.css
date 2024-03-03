@@ -26,28 +26,27 @@ header, footer {
 }
 
 main {
-    flex: 1; /* This will make the main content expand to fill available space */
+    flex: 1; /* This will make the main content expand to fill available vertical space */
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-around; /* Distribute space evenly */
-    align-items: center; /* Center children horizontally */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: space-between; /* Keeps intro and ad-sidebar on opposite ends */
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
-.intro, .ad-sidebar {
-    flex: 1; /* Give both intro and ad-sidebar equal ability to grow */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically in the flex container */
-    align-items: center; /* Center content horizontally in the flex container */
-    text-align: center; /* Center text */
+.intro {
+    /* Your existing styles for intro */
+    flex-grow: 1; /* Let the intro section grow to use available space */
 }
 
 .ad-sidebar {
+    /* Your existing styles for ad-sidebar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the ad vertically */
+    align-items: flex-end; /* Align the ad to the right edge */
     max-width: 300px; /* Adjust this as necessary */
-    width: 100%; /* Make the width 100% of its container */
 }
 
 .ad-sidebar img {
