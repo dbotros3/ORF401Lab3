@@ -34,6 +34,7 @@ main {
 }
 
 .ad-sidebar {
+    display: flex;
     width: 200px; /* Adjust based on your ad size */
     height: auto; /* Adjust if you have a specific height in mind */
     overflow: visible; /* Ensure any overflowing parts are visible */
