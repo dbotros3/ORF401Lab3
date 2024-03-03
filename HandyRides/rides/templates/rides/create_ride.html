@@ -13,26 +13,31 @@
             margin: 0;
             font-family: Arial, sans-serif;
         }
-        .header, .footer {
+        .header {
             background-color: #007bff;
             color: white;
             padding: 20px;
             text-align: center;
-        }
-        .footer {
-            margin-top: auto;
             position: relative;
         }
         .home-link {
             position: absolute;
             right: 20px;
-            top: 20px;
+            top: 50%;
+            transform: translateY(-50%);
             color: white;
             text-decoration: none;
         }
+        .footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
         form {
             max-width: 500px;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -53,13 +58,14 @@
             margin: 5px 0;
             border-radius: 5px;
             border: 1px solid #ddd;
-            width: 100%; /* Adjust width based on padding and border */
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <h1>Find a Ride!</h1>
+        <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
     </header>
     
     <form method="post" action="{% url 'rides:create' %}">
@@ -69,7 +75,6 @@
     </form>
 
     <footer class="footer">
-        <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
         <p>© 2024 CoTravel. All rights reserved.</p>
     </footer>
 </body>
