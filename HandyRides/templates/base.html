@@ -41,13 +41,50 @@
     </header>
     <div class="container text-center mt-5">
         <img src="{% static 'logo.jpg' %}" alt="Image of logo" class="img-fluid my-3">
+        
+        <!-- Table -->
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Origination City</th>
+                <th>Origination State</th>
+                <th>Destination City</th>
+                <th>Destination State</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Taking Passengers</th>
+                <th>Seats Available</th>
+                <th>Email Address</th>
+                <th>Vehicle Type</th>
+            </tr>
+            <!-- Sample row -->
+            <tr>
+                <td>John</td>
+                <td>Smith</td>
+                <td>21</td>
+                <td>Princeton</td>
+                <td>NJ</td>
+                <td>Chicago</td>
+                <td>IL</td>
+                <td>May 1, 2001</td>
+                <td>4:20 p.m.</td>
+                <td>False</td>
+                <td>0</td>
+                <td>john@princeton.edu</td>
+                <td>Tesla</td>
+            </tr>
+            <!-- Additional rows as needed -->
+        </table>
+
         <!-- Search form -->
         <div class="search-container">
             <input type="text" class="search-box" placeholder="Search Origination/Destination City">
             <input type="text" class="search-box" placeholder="Search Destination State">
             <button type="submit" class="btn">Submit</button>
         </div>
-        <!-- The table goes here -->
+        
     </div>
     <footer class="text-white text-center p-3" style="background-color: #343a40;">
         <p>&copy; 2024 CoTravel. All rights reserved.</p>
