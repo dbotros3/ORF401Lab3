@@ -23,7 +23,7 @@ main {
     justify-content: space-between; /* This spreads out the flex items */
     align-items: start; /* Align items to the top */
     padding: 20px;
-    width: 100%; /* Ensure it takes the full width */
+    width: 50%; /* Ensure it takes the full width */
 }
 
 .intro {
@@ -32,7 +32,7 @@ main {
 
 .ad-sidebar {
     /* Your existing styles */
-    width: 75px; /* Adjust based on your ad size */
+    width: 200px; /* Adjust based on your ad size */
     /* Remove margin: 0 auto; since we're aligning to the edge now */
 }
 
