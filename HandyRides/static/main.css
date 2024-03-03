@@ -40,7 +40,7 @@ main {
 
 
 .ad-sidebar img {
-    max-width: 100%; /* Allows the image to scale down */
+    max-width: 200%; /* Allows the image to scale down */
     height: auto;
 }
 
