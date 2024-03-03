@@ -13,10 +13,9 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Make sure it fills the flex parent, which is body */
-    width: 100%; /* Ensure it spans the full width */
+    justify-content: flex-start; /* Adjust this as necessary */
+    min-height: 100vh;
 }
-
 
 
 header, footer {
@@ -29,13 +28,12 @@ header, footer {
 main {
     flex: 1; /* This will make the main content expand to fill available space */
     display: flex;
-    flex-direction: column; /* Change to column to control the vertical layout */
-    justify-content: space-between; /* This will push the ad-bottom section down */
+    justify-content: space-between;
+    align-items: start;
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
 }
-
 
 
 
@@ -81,10 +79,8 @@ main {
 .ad-bottom {
     text-align: center;
     padding: 20px;
-    margin-top: 0; /* Minimize space above the ad */
-    margin-bottom: 0; /* Minimize space below the ad */
+    margin-bottom: 0; /* Reduces the bottom margin to push it closer to the footer */
 }
-
 
 
 .ad {
@@ -116,5 +112,3 @@ footer {
     text-align: center;
     margin-top: auto; /* This will push the footer to the bottom */
 }
-
-
