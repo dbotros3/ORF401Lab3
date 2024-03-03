@@ -44,6 +44,16 @@ main {
     height: auto;
 }
 
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center; /* Center-align the items for a vertical layout */
+    }
+    .ad-sidebar, .ad-sidebar img {
+        max-width: 100%; /* Allows the ad to take the full width */
+    }
+}
+
 
 .ad-bottom {
     text-align: center;
