@@ -23,7 +23,7 @@ main {
     justify-content: space-between;
     align-items: start;
     padding: 20px;
-    width: 100%;
+    width: 200%;
     box-sizing: border-box; /* Include padding in the width calculation */
 }
 
@@ -44,15 +44,6 @@ main {
     height: auto;
 }
 
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;
-        align-items: center; /* Center-align the items for a vertical layout */
-    }
-    .ad-sidebar, .ad-sidebar img {
-        max-width: 100%; /* Allows the ad to take the full width */
-    }
-}
 
 
 .ad-bottom {
