@@ -13,25 +13,37 @@
       align-items: center;
     }
 
-    .header-title {
+    .header-title-wrapper {
       flex-grow: 1;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      position: relative;
     }
 
-    .header-link {
-      flex-grow: 0; /* Prevent the link from growing */
-      padding-left: 20px; /* Ensures the link doesn't stick to the text */
+    .header-title {
+      position: absolute;
     }
-    
+
+    .header-link, .header-spacer {
+      width: 120px; /* Ensure this width accommodates your longest link text */
+    }
+
+    .header-spacer {
+      visibility: hidden;
+    }
   </style>
   <script src="{% static 'main.js' %}"></script>
 </head>
 <body>
   <header class="bg-primary text-white p-4">
     <div class="container header-container">
-      <div class="header-title">
-        <h1 class="mb-0">Find a Ride!</h1>
+      <!-- Spacer to balance the title -->
+      <div class="header-spacer"></div>
+      <!-- Title centered using wrapper and absolute positioning -->
+      <div class="header-title-wrapper">
+        <h1 class="header-title mb-0">Find a Ride!</h1>
       </div>
+      <!-- Actual link -->
       <a href="{% url 'rides:create' %}" class="text-white header-link">Create a Ride</a>
     </div>
   </header>
