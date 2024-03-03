@@ -28,20 +28,21 @@ header, footer {
 main {
     flex: 1; /* This will make the main content expand to fill available vertical space */
     display: flex;
-    align-items: center; /* Align children vertically in the center */
-    justify-content: space-between; /* Keeps intro and ad-sidebar on opposite ends */
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .intro {
-    /* Your existing styles for intro */
     flex-grow: 1; /* Let the intro section grow to use available space */
+    display: flex; /* Make intro a flex container too */
+    flex-direction: column; /* Stack its children vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
 }
 
 .ad-sidebar {
-    /* Your existing styles for ad-sidebar */
+    /* No change needed here as it's already flex and centered vertically */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center the ad vertically */
@@ -54,11 +55,6 @@ main {
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the full image is visible */
 }
-
-
-
-
-
 
 
 
