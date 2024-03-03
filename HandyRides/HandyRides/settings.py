@@ -27,7 +27,7 @@ SECRET_KEY = 'rdd_pbq5kbs#%klh++xokz06dr-o=ki&7!9ze^tv$26xwehbs('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'dbotros.pythonanywhere.com']
 
 
 # Application definition
