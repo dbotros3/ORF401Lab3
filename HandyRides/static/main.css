@@ -20,8 +20,20 @@ header, footer {
 
 main {
     display: flex;
-    justify-content: space-around; /* Adjust as necessary for layout */
+    justify-content: space-between; /* This spreads out the flex items */
+    align-items: start; /* Align items to the top */
     padding: 20px;
+    width: 100%; /* Ensure it takes the full width */
+}
+
+.intro {
+    flex-grow: 1; /* Allows the intro section to grow and take available space */
+}
+
+.ad-sidebar {
+    /* Your existing styles */
+    width: 200px; /* Adjust based on your ad size */
+    /* Remove margin: 0 auto; since we're aligning to the edge now */
 }
 
 .intro, .ad-sidebar {
