@@ -1,6 +1,6 @@
 {% load static %}
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -22,4 +22,42 @@
       <p>&copy; 2024 CoTravel. All rights reserved.</p>
     </footer>
   </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ORF 401: Spring 2024</title>
+    <link rel="stylesheet" href="{% static 'search.css' %}">
+    <script src="{% static 'main.js' %}"></script>
+  </head>
+  <body>
+    <header class="text-white p-4 text-center" style="background-color: #007bff;">
+      <h1>Find a Ride!</h1>
+    </header>
+    <div class="container text-center mt-5">
+        <img src="{% static 'logo.jpg' %}" alt="Image of logo" class="img-fluid my-3">
+        {% block content %}
+        <!-- Your table should be here -->
+        
+        <!-- Search container -->
+        <div class="search-container">
+          <!-- Search input for origin/destination city -->
+          <input type="text" class="search-box" placeholder="Search Origination/Destination City">
+          <!-- Search input for destination state -->
+          <input type="text" class="search-box" placeholder="Search Destination State">
+        </div>
+        <!-- Submit button for the form -->
+        <button type="submit" class="btn">Submit</button>
+
+        {% endblock %}
+    </div>
+    <footer class="text-white text-center p-3" style="background-color: #343a40;">
+      <p>&copy; 2024 CoTravel. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
+
