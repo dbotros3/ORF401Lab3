@@ -34,11 +34,14 @@ main {
 }
 
 .ad-sidebar {
-    display: flex;
-    width: 200px; /* Adjust based on your ad size */
-    height: auto; /* Adjust if you have a specific height in mind */
-    overflow: visible; /* Ensure any overflowing parts are visible */
+    width: 200px; /* Adjust based on your desired size */
+    height: 200px; /* Adjust based on your desired size */
+    background-image: url('{% static "robinad.png" %}');
+    background-size: contain; /* Or 'cover' to fill the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
+
 
 
 
