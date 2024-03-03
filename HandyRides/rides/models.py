@@ -16,5 +16,4 @@ class Person(models.Model):
   taking_passengers = models.BooleanField(default=False)
   seats_available = models.IntegerField(default=0)
   email_address = models.CharField(max_length=64, default=None)
-  phone_number = models.CharField(max_length=64, default=None)
   vehicle_type = models.CharField(max_length=64, default=None)
