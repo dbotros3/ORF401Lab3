@@ -23,13 +23,12 @@ header, footer {
 }
 
 main {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box; /* Include padding in the width calculation */
+    flex-direction: column;
+    justify-content: space-between; /* This will push the ad to the bottom of the main content */
 }
+
 
 
 .intro {
