@@ -32,7 +32,7 @@ main {
 
 .ad-sidebar {
     /* Your existing styles */
-    width: 200px; /* Adjust based on your ad size */
+    width: 75px; /* Adjust based on your ad size */
     /* Remove margin: 0 auto; since we're aligning to the edge now */
 }
 
