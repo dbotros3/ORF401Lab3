@@ -35,7 +35,7 @@ main {
 }
 
 .ad-sidebar img {
-    width: 500%; /* This will make the image responsive, adjusting to the width of the sidebar */
+    width: 50%; /* This will make the image responsive, adjusting to the width of the sidebar */
     height: auto; /* This will maintain the aspect ratio of the image */
 }
 
