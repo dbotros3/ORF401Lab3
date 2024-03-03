@@ -6,13 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>ORF 401: Spring 2024</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-title {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .header-link {
+      flex-grow: 0; /* Prevent the link from growing */
+      padding-left: 20px; /* Ensures the link doesn't stick to the text */
+    }
+  </style>
   <script src="{% static 'main.js' %}"></script>
 </head>
 <body>
   <header class="bg-primary text-white p-4">
-    <div class="container d-flex justify-content-between align-items-center">
-      <h1 class="mb-0">Find a Ride!</h1>
-      <a href="{% url 'rides:create' %}" class="text-white">Create a Ride</a>
+    <div class="container header-container">
+      <div class="header-title">
+        <h1 class="mb-0">Find a Ride!</h1>
+      </div>
+      <a href="{% url 'rides:create' %}" class="text-white header-link">Create a Ride</a>
     </div>
   </header>
   <div class="container text-center mt-5">
