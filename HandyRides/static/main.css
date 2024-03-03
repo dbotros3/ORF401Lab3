@@ -1,13 +1,20 @@
+
+
+
+
+
+
+
+
+
 body, html {
-    margin: 0;
+    margin: 0; 
     padding: 0;
     min-height: 100vh; /* Ensures at least full viewport height */
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
 }
-
-
 
 .container {
     display: flex;
@@ -24,15 +31,10 @@ header, footer {
 
 main {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    flex-direction: column; /* Ensure main content stacks vertically */
     padding: 20px;
-    width: 100%;
     box-sizing: border-box; /* Include padding in the width calculation */
 }
-
-
-
 
 .intro {
     flex-grow: 1;
@@ -46,30 +48,11 @@ main {
     overflow: hidden; /* Optional: hides parts of the image that overflow */
 }
 
-
 .ad-sidebar img {
     width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the full image is visible */
 }
-
-
-
-@media (min-width: 768px) { /* For larger screens */
-    .ad-sidebar img {
-        max-width: none; /* Allows the image to exceed the 200px limit if needed */
-        width: 20vw; /* Example: Adjusts width based on the viewport width */
-    }
-}
-
-@media (max-width: 768px) { /* For smaller screens */
-    .ad-sidebar img {
-        width: 50vw; /* Larger percentage of the viewport width on smaller screens */
-    }
-}
-
-
-
 
 .ad-bottom {
     text-align: center;
@@ -105,5 +88,6 @@ footer {
     text-align: center;
     margin-top: auto; /* Pushes the footer to the bottom */
 }
+
 
 
