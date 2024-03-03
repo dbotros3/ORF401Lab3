@@ -1,0 +1,77 @@
+input[type="text"] {
+  width: 100%; /* Make input fill the container */
+  max-width: 100%; /* Prevent it from overflowing */
+  box-sizing: border-box; /* Include padding and border in the element's width */
+  margin-bottom: 10px; /* Add some space below each input */
+}
+/* Reset some basic elements */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Mimic Bootstrap's container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Responsive design */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Header styles */
+header {
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40; /* Dark */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Image styles */
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form styles */
+form {
+  margin-top: 2rem;
+}
+
+/* Add any additional styles as needed */
