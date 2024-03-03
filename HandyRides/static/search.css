@@ -1,9 +1,3 @@
-input[type="text"] {
-  width: 100%; /* Make input fill the container */
-  max-width: 100%; /* Prevent it from overflowing */
-  box-sizing: border-box; /* Include padding and border in the element's width */
-  margin-bottom: 10px; /* Add some space below each input */
-}
 /* Reset some basic elements */
 html, body {
   margin: 0;
@@ -20,40 +14,6 @@ html, body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-/* Search box container */
-.search-container {
-  display: flex;
-  justify-content: space-between; /* Add space between the two search boxes */
-  padding: 0.5rem; /* Optional padding around the search boxes */
-  gap: 1rem; /* Add some space between the search boxes */
-}
-
-/* Individual search boxes */
-.search-box {
-  flex-basis: 48%; /* Assign width to each search box */
-}
-
-/* Table headers */
-th {
-  background-color: #f0f0f0; /* Light gray background */
-  padding: 0.5rem; /* Padding inside the headers */
-}
-
-/* Apply styles to the table to make it more visually appealing */
-table {
-  width: 100%; /* Make the table take up the full width */
-  border-collapse: collapse; /* Collapse borders */
-}
-
-th, td {
-  border: 1px solid #ddd; /* Light gray border for table cells */
-  text-align: left; /* Align text to the left */
-  padding: 8px; /* Padding inside cells */
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2; /* Zebra striping for rows */
 }
 
 /* Responsive design */
@@ -81,6 +41,20 @@ tr:nth-child(even) {
   }
 }
 
+/* Search container */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Individual search boxes */
+.search-box {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
 .btn {
   padding: 0.5rem 1rem;
   background-color: #007bff;
@@ -94,32 +68,17 @@ tr:nth-child(even) {
   background-color: #0056b3;
 }
 
-
-/* Header styles */
-header {
-  background-color: #007bff; /* Primary blue */
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
+/* Table styles */
+th {
+  background-color: #f0f0f0;
+  padding: 0.5rem;
 }
 
-/* Footer styles */
-footer {
-  background-color: #343a40; /* Dark */
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-/* Image styles */
-img.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
+th, td {
+  border: 1px solid #ddd
 
-/* Form styles */
-form {
-  margin-top: 2rem;
-}
-
-/* Add any additional styles as needed */
