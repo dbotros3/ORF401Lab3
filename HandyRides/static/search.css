@@ -21,6 +21,40 @@ html, body {
   margin-right: auto;
   margin-left: auto;
 }
+/* Search box container */
+.search-container {
+  display: flex;
+  justify-content: space-between; /* Add space between the two search boxes */
+  padding: 0.5rem; /* Optional padding around the search boxes */
+  gap: 1rem; /* Add some space between the search boxes */
+}
+
+/* Individual search boxes */
+.search-box {
+  flex-basis: 48%; /* Assign width to each search box */
+}
+
+/* Table headers */
+th {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 0.5rem; /* Padding inside the headers */
+}
+
+/* Apply styles to the table to make it more visually appealing */
+table {
+  width: 100%; /* Make the table take up the full width */
+  border-collapse: collapse; /* Collapse borders */
+}
+
+th, td {
+  border: 1px solid #ddd; /* Light gray border for table cells */
+  text-align: left; /* Align text to the left */
+  padding: 8px; /* Padding inside cells */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
 
 /* Responsive design */
 @media (min-width: 576px) {
