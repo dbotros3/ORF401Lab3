@@ -30,12 +30,12 @@ main {
 
 .ad-sidebar {
     /* Adjust the width as per your design requirements */
-    width: 200px;
+    width: 100px;
     margin: 0 auto; /* This will center the ad if the sidebar has no other content */
 }
 
 .ad-sidebar img {
-    width: 100%; /* This will make the image responsive, adjusting to the width of the sidebar */
+    width: 500%; /* This will make the image responsive, adjusting to the width of the sidebar */
     height: auto; /* This will maintain the aspect ratio of the image */
 }
 
