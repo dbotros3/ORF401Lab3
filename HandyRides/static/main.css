@@ -26,13 +26,15 @@ header, footer {
 }
 
 main {
+    flex: 1; /* This will make the main content expand to fill available space */
     display: flex;
     justify-content: space-between;
     align-items: start;
     padding: 20px;
     width: 100%;
-    box-sizing: border-box; /* Include padding in the width calculation */
+    box-sizing: border-box;
 }
+
 
 
 
@@ -108,5 +110,6 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto; /* Pushes the footer to the bottom */
-} 
+    margin-top: auto; /* This will push the footer to the bottom */
+}
+
