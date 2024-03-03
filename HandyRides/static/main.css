@@ -43,11 +43,11 @@ header {
 }
 
 .btn-secondary {
-    background-color: #6c757d;
+    background-color: #007bff;
 }
 
 .btn-secondary:hover {
-    background-color: #545b62;
+    background-color: #0056b3;
 }
 
 footer {
