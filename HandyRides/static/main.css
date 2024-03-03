@@ -23,7 +23,7 @@ main {
     justify-content: space-between;
     align-items: start;
     padding: 20px;
-    width: 120%;
+    width: 100%;
     box-sizing: border-box; /* Include padding in the width calculation */
 }
 
@@ -36,7 +36,7 @@ main {
 .ad-sidebar {
     display: flex;
     justify-content: flex-end; /* Align children to the right */
-    max-width: 200px; /* Adjust this as necessary */
+    max-width: 300px; /* Adjust this as necessary */
     overflow: hidden; /* Optional: hides parts of the image that overflow */
 }
 
