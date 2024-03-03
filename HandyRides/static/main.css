@@ -34,11 +34,11 @@ main {
 }
 
 .ad-sidebar {
-    display: flex;
-    justify-content: flex-end; /* Align children to the right */
-    max-width: 200px; /* Adjust this as necessary */
-    overflow: hidden; /* Optional: hides parts of the image that overflow */
+    width: 200px; /* Adjust based on your ad size */
+    height: auto; /* Adjust if you have a specific height in mind */
+    overflow: visible; /* Ensure any overflowing parts are visible */
 }
+
 
 
 
