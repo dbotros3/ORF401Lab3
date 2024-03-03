@@ -25,13 +25,13 @@
 </html> -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to CoTravel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
@@ -49,4 +49,37 @@
         <p>&copy; 2024 CoTravel. All rights reserved.</p>
     </footer>
 </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to CoTravel</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to CoTravel</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <h2>Connect with fellow attendees!</h2>
+                <p>Share rides to events and meet new friends along the way.</p>
+                <div class="buttons">
+                    <a href="rides/" class="btn btn-primary">Find a Ride</a>
+                    <a href="{% url 'rides:create' %}" class="btn btn-secondary">Create a Ride</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 CoTravel. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
 </html>
+
