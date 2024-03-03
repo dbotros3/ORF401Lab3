@@ -58,18 +58,7 @@ main {
 
 
 
-@media (min-width: 768px) { /* For larger screens */
-    .ad-sidebar img {
-        max-width: none; /* Allows the image to exceed the 200px limit if needed */
-        width: 20vw; /* Example: Adjusts width based on the viewport width */
-    }
-}
 
-@media (max-width: 768px) { /* For smaller screens */
-    .ad-sidebar img {
-        width: 50vw; /* Larger percentage of the viewport width on smaller screens */
-    }
-}
 
 
 
