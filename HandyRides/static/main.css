@@ -8,20 +8,36 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Make container at least the height of the viewport */
-    justify-content: space-between; /* Distribute space between header, main content, and footer */
+    min-height: 100vh;
 }
 
-header {
+header, footer {
     background-color: #007bff;
     color: white;
     padding: 20px 0;
     text-align: center;
 }
 
-.intro {
+main {
+    display: flex;
+    justify-content: space-around; /* Adjust as necessary for layout */
     padding: 20px;
+}
+
+.intro, .ad-sidebar {
+    flex: 1;
+}
+
+.ad-sidebar, .ad-bottom {
     text-align: center;
+    padding: 20px;
+}
+
+.ad {
+    border: 2px solid #007bff; /* Placeholder styling for ads */
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
 }
 
 .buttons a {
@@ -31,29 +47,14 @@ header {
     padding: 10px 20px;
     color: white;
     border-radius: 5px;
+    background-color: #007bff;
     transition: background-color 0.3s;
 }
 
-.btn-primary {
-    background-color: #007bff;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-
-.btn-secondary {
-    background-color: #007bff;
-}
-
-.btn-secondary:hover {
+.btn-primary:hover, .btn-secondary:hover {
     background-color: #0056b3;
 }
 
 footer {
-    background-color: #007bff;
-    color: white;
     padding: 10px 0;
-    text-align: center;
 }
-
