@@ -80,7 +80,7 @@ main {
 .ad {
     border: 2px solid #000000; /* Placeholder styling for ads */
     padding: 20px;
-    margin: 40px 0;
+    margin: 40px 40;
     background-color: #f0f0f0;
 }
 
