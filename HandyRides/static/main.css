@@ -43,10 +43,11 @@ main {
 
 
 .ad-sidebar img {
-    width: 100vw; /* Example: Adjust based on the viewport width */
-    max-width: 200px; /* Maximum size */
+    width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the full image is visible */
 }
+
 
 
 @media (min-width: 768px) { /* For larger screens */
