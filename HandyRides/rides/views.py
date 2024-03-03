@@ -32,7 +32,7 @@ def index(request):
     return render(request, "index_view.html", context)
 
 def splash_page(request):
-    return render(request, "rides/index.html")
+    return render(request, "index.html")
 
 def create(request):
     if request.method == 'POST':
