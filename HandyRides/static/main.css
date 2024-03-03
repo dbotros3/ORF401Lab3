@@ -28,7 +28,19 @@ main {
     flex: 1;
 }
 
-.ad-sidebar, .ad-bottom {
+.ad-sidebar {
+    /* Adjust the width as per your design requirements */
+    width: 200px;
+    margin: 0 auto; /* This will center the ad if the sidebar has no other content */
+}
+
+.ad-sidebar img {
+    width: 100%; /* This will make the image responsive, adjusting to the width of the sidebar */
+    height: auto; /* This will maintain the aspect ratio of the image */
+}
+
+
+.ad-bottom {
     text-align: center;
     padding: 20px;
 }
