@@ -28,35 +28,34 @@ header, footer {
 main {
     flex: 1; /* This will make the main content expand to fill available space */
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center; /* Center children horizontally */
     padding: 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
-
-
-
-
-.intro {
-    flex-grow: 1;
-    flex-shrink: 1; /* Allows the section to shrink if necessary */
+.intro, .ad-sidebar {
+    flex: 1; /* Give both intro and ad-sidebar equal ability to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically in the flex container */
+    align-items: center; /* Center content horizontally in the flex container */
+    text-align: center; /* Center text */
 }
 
 .ad-sidebar {
-    display: flex;
-    justify-content: flex-end; /* Align children to the right */
     max-width: 300px; /* Adjust this as necessary */
-    overflow: hidden; /* Optional: hides parts of the image that overflow */
+    width: 100%; /* Make the width 100% of its container */
 }
-
 
 .ad-sidebar img {
     width: 100%; /* Full width of the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure the full image is visible */
 }
+
 
 
 
