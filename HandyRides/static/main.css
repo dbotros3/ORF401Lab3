@@ -13,8 +13,10 @@ body, html {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Adjust this as necessary */
     min-height: 100vh;
 }
+
 
 header, footer {
     background-color: #007bff;
@@ -75,7 +77,9 @@ main {
 .ad-bottom {
     text-align: center;
     padding: 20px;
+    margin-bottom: 0; /* Reduces the bottom margin to push it closer to the footer */
 }
+
 
 .ad {
     border: 2px solid #000000; /* Placeholder styling for ads */
