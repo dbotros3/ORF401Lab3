@@ -49,6 +49,7 @@
             background-color: #007bff;
             color: white;
         }
+<!-- 
         .header-content {
             display: flex;
             flex-direction: row;
@@ -67,7 +68,8 @@
         .home-link {
             color: white;
             text-decoration: none;
-        }
+        } 
+-->
         form {
             max-width: 500px;
             margin: 20px auto;
@@ -99,7 +101,7 @@
     <header class="header p-3 text-center">
         <div class="container header-content">
             <h1 class="text-center">Find a Ride!</h1>
-            <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
+            <a href="{% url 'rides:splash_page' %}" class="header-link">Home</a>
         </div>
     </header>
 
