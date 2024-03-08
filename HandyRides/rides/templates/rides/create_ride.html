@@ -12,22 +12,21 @@
         }
         .header-content {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            justify-content: center; /* Center content horizontally */
             align-items: center;
+            flex-direction: column; /* Stack elements vertically */
+            text-align: center;
         }
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             .header-content {
-                flex-direction: column;
-            }
-            .home-link {
-                order: 2;
-                margin-top: 10px;
+                flex-direction: row; /* Align elements side by side on larger screens */
+                justify-content: space-between; /* Space out title and link */
             }
         }
         .home-link {
             color: white;
             text-decoration: none;
+            margin-top: 10px; /* Add margin top only in column layout for mobile */
         }
         form {
             max-width: 500px;
@@ -57,9 +56,9 @@
     </style>
 </head>
 <body>
-    <header class="header p-3 text-center">
+    <header class="header p-3">
         <div class="container header-content">
-            <h1 class="mb-0">Find a Ride!</h1>
+            <h1>Find a Ride!</h1>
             <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
         </div>
     </header>
