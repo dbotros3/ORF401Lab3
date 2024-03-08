@@ -12,27 +12,50 @@
         }
         .header-content {
             display: flex;
-            justify-content: center; /* Center content horizontally */
             align-items: center;
-            flex-direction: column; /* Stack elements vertically */
+            position: relative;
             text-align: center;
         }
-        @media (min-width: 768px) {
+        .header-content::before {
+            content: '';
+            visibility: hidden;
+        }
+        .header-content h1 {
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+        @media (max-width: 768px) {
             .header-content {
-                flex-direction: row; /* Align elements side by side on larger screens */
-                justify-content: space-between; /* Space out title and link */
+                flex-direction: column;
+            }
+            .home-link {
+                order: 2;
+                margin-top: 10px;
+            }
+            .header-content::before {
+                display: none;
             }
         }
         .home-link {
             color: white;
             text-decoration: none;
-            margin-top: 10px; /* Add margin top only in column layout for mobile */
+            position: absolute;
+            right: 15px; /* Adjust based on padding */
+            top: 50%;
+            transform: translateY(-50%);
         }
         form {
             max-width: 500px;
             margin: 20px auto;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"], input[type="text"], textarea, select {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
         }
         input[type="submit"] {
             background-color: #007bff;
@@ -46,17 +69,10 @@
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
-        input[type="text"], textarea, select {
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
-    <header class="header p-3">
+    <header class="header p-3 text-center">
         <div class="container header-content">
             <h1>Find a Ride!</h1>
             <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
