@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -7,42 +6,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to CoTravel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha384-+qdLaqAC8oLwW8E6Dc3t/Vz2T7D+HMTqM3lF3X3eST7gduZsIun966ebhCgfk9Ig" crossorigin="anonymous">
     <!-- Correct way to link to static files in Django -->
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 
-
 <body>
     <div class="container">
-        <header>
-            <h1>Welcome to CoTravel</h1>
+        <header class="py-3 mb-4">
+            <h1 class="text-center">Welcome to CoTravel</h1>
         </header>
-        <main>
-            <section class="intro">
+        <main class="row">
+            <section class="intro col-md-8 text-center">
                 <h2>Connect with fellow attendees!</h2>
                 <p>Share rides to events and meet new friends along the way.</p>
-                <div class="buttons">
+                <div class="buttons my-3">
                     <a href="rides/" class="btn btn-primary">Find a Ride</a>
                     <a href="{% url 'rides:create' %}" class="btn btn-secondary">Create a Ride</a>
                 </div>
             </section>
-            <aside class="ad-sidebar">
+            <aside class="ad-sidebar col-md-4 d-flex justify-content-center">
                 <!-- Fake Advertisement -->
-                <img src="{% static 'robinad.png' %}" alt="Robin Ad">
-
+                <img src="{% static 'robinad.png' %}" alt="Robin Ad" class="img-fluid">
             </aside>
-            
         </main>
-        <section class="ad-bottom">
+        <section class="ad-bottom my-3">
             <!-- Fake Advertisement -->
-            <div class="ad">ADVERTISE YOUR EVENT HERE TEST! Contact events@cotravel.com</div>
+            <div class="ad text-center">ADVERTISE YOUR EVENT HERE! Contact events@cotravel.com</div>
         </section>
-        <footer>
+        <footer class="py-3">
             <p>&copy; 2024 CoTravel. All rights reserved.</p>
         </footer>
     </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHj6/Y9gh3tyCsFbV7Xbaw0+8VAtDPfIBIPJYAM7t+O/LSHTA6Kz4rl" crossorigin="anonymous"></script>
 </body>
-    
 </html>
 
 
