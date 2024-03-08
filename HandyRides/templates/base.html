@@ -9,28 +9,54 @@
   <style>
     .header-container {
       display: flex;
-      justify-content: center; /* Center horizontally */
-      align-items: center; /* Center vertically */
-      text-align: center; /* Ensure text is centered as well */
+      justify-content: space-between; /* Adjusted for even spacing */
+      align-items: center;
+      text-align: center;
       position: relative;
     }
 
     .header-title {
-      flex: 1; /* Allows the title to grow and fill the space for centering */
+      flex: 1;
+      position: absolute;
+      width: 100%;
+      left: 0;
+    }
+
+    .header-link, .header-container::before, .header-container::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px;
+    }
+
+    .header-container::before {
+      right: 100%; /* Position the pseudo-element to the far left */
+    }
+
+    .header-container::after {
+      left: 100%; /* Position the pseudo-element to the far right */
     }
 
     @media (max-width: 768px) {
-      .header-link {
+      .header-title, .header-link {
         position: static;
-        margin-top: 10px; /* Add some space between the title and the link on smaller screens */
         transform: none;
       }
+
       .header-container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
+        flex-direction: column;
+      }
+
+      .header-container::before, .header-container::after {
+        content: none; /* Remove pseudo-elements on smaller screens */
       }
     }
 
-    
+    .header-link {
+      right: 0;
+    }
   </style>
   <script src="{% static 'main.js' %}"></script>
 </head>
@@ -42,7 +68,6 @@
     </div>
   </header>
   <div class="container text-center mt-5">
-      <!-- Wrap image in a link to the home page -->
       <a href="{% url 'rides:splash_page' %}">
           <img src="{% static 'logo.jpg' %}" alt="CoTravel Logo" class="img-fluid my-3">
       </a>
@@ -54,3 +79,4 @@
   </footer>
 </body>
 </html>
+
