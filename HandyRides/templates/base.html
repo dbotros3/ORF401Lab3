@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>ORF 401: Spring 2024</title>
@@ -14,11 +13,21 @@
       align-items: center; /* Center vertically */
       text-align: center; /* Ensure text is centered as well */
       position: relative;
-      height: 80px; /* Or height of your choice */
     }
 
     .header-title {
       flex: 1; /* Allows the title to grow and fill the space for centering */
+    }
+
+    @media (max-width: 768px) {
+      .header-link {
+        position: static;
+        margin-top: 10px; /* Add some space between the title and the link on smaller screens */
+        transform: none;
+      }
+      .header-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+      }
     }
 
     .header-link {
@@ -28,8 +37,6 @@
       transform: translateY(-50%);
       padding: 20px;
     }
-
-    /* Other styles... */
   </style>
   <script src="{% static 'main.js' %}"></script>
 </head>
