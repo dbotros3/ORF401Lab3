@@ -9,53 +9,37 @@
   <style>
     .header-container {
       display: flex;
-      justify-content: space-between; /* Adjusted for even spacing */
+      justify-content: center; /* Keep content centered */
       align-items: center;
       text-align: center;
       position: relative;
+      padding-right: 80px; /* Adjust padding to compensate for the link, ensuring the title remains centered */
+      height: 80px; /* Maintain original height */
     }
 
     .header-title {
-      flex: 1;
-      position: absolute;
-      width: 100%;
-      left: 0;
+      flex-grow: 1;
+      z-index: 1; /* Ensure the title overlays the pseudo-elements */
     }
 
-    .header-link, .header-container::before, .header-container::after {
-      display: block;
-      content: "";
+    .header-link {
       position: absolute;
+      right: 20px; /* Maintain consistent spacing from the right */
       top: 50%;
       transform: translateY(-50%);
-      padding: 20px;
-    }
-
-    .header-container::before {
-      right: 100%; /* Position the pseudo-element to the far left */
-    }
-
-    .header-container::after {
-      left: 100%; /* Position the pseudo-element to the far right */
+      z-index: 2; /* Ensure link is clickable */
     }
 
     @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        padding-right: 0; /* Remove extra padding on smaller screens */
+      }
+      
       .header-title, .header-link {
         position: static;
         transform: none;
       }
-
-      .header-container {
-        flex-direction: column;
-      }
-
-      .header-container::before, .header-container::after {
-        content: none; /* Remove pseudo-elements on smaller screens */
-      }
-    }
-
-    .header-link {
-      right: 0;
     }
   </style>
   <script src="{% static 'main.js' %}"></script>
@@ -79,4 +63,3 @@
   </footer>
 </body>
 </html>
-
