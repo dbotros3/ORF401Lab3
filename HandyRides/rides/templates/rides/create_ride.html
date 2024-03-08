@@ -3,57 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ORF 401: Spring 2024</title>
+    <title>Create a Ride - CoTravel</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-        .header-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+        .header {
+            background-color: #007bff;
+            color: white;
         }
-        @media (min-width: 768px) {
-            .header-container {
-                flex-direction: row;
-                justify-content: space-between;
+        .header-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .home-link {
+                order: 2;
+                margin-top: 10px;
             }
         }
         .home-link {
             color: white;
             text-decoration: none;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
             padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="text"], textarea, select {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white p-4">
-        <div class="container header-container">
+    <header class="header p-3 text-center">
+        <div class="container header-content">
             <h1 class="mb-0">Find a Ride!</h1>
-            <a href="{% url 'home' %}" class="home-link">Home</a>
+            <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
         </div>
     </header>
 
-    <div class="container mt-5">
-        {% block content %}
-        <!-- Content goes here -->
-        {% endblock %}
+    <div class="container">
+        <form method="post" action="{% url 'rides:create' %}" class="mt-5">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Create Ride">
+        </form>
     </div>
 
     <footer class="bg-primary text-white text-center p-3 mt-4">
-        <p>&copy; 2024 CoTravel. All rights reserved.</p>
+        <p>© 2024 CoTravel. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-+JnE0Hp5k3M8JAtT/6LmqzF8a7PnJJ2Ck4KoAB5E4zJwJK6ZGDK4j82F3i/SBx2q" crossorigin="anonymous"></script>
 </body>
 </html>
-
-{% extends 'base.html' %}
-
-{% block content %}
-<div class="py-4">
-    <h2>Create a Ride</h2>
-    <form method="post" action="{% url 'rides:create' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Create Ride" class="btn btn-primary mt-2">
-    </form>
-</div>
-{% endblock %}
