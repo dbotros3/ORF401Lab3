@@ -6,75 +6,37 @@
     <title>Create a Ride - CoTravel</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-
-        .header-container {
-            display: flex;
-            justify-content: center; /* Keep content centered */
-            align-items: center;
-            text-align: center;
-            position: relative;
-            padding-right: 80px; /* Adjust padding to compensate for the link, ensuring the title remains centered */
-            height: 80px; /* Maintain original height */
-        }
-
-        .header-title {
-            flex-grow: 1;
-            z-index: 1; /* Ensure the title overlays the pseudo-elements */
-        }
-
-        .header-link {
-            position: absolute;
-            right: 20px; /* Maintain consistent spacing from the right */
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2; /* Ensure link is clickable */
-        }
-
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            padding-right: 0; /* Remove extra padding on smaller screens */
-          }
-      
-        .header-title, .header-link {
-            position: static;
-            transform: none;
-          }
-        }
-
-        
-        
-        
         .header {
             background-color: #007bff;
             color: white;
         }
-        .header-content {
+        .header-container {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            justify-content: center; /* Center content */
             align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px; /* Adjust as necessary */
         }
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-            }
-            .home-link {
-                order: 2;
-                margin-top: 10px;
+        @media (min-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                justify-content: space-between;
+                padding-right: 0; /* Reset padding for larger screens */
             }
         }
         .home-link {
             color: white;
             text-decoration: none;
-        } 
+            margin-top: 10px; /* Space below title on mobile */
+        }
         form {
             max-width: 500px;
             margin: 20px auto;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        input[type="submit"] {
+        input[type="submit"], input[type="text"], textarea, select {
             background-color: #007bff;
             color: white;
             border: none;
@@ -82,23 +44,17 @@
             margin-top: 10px;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%; /* Ensure form elements stretch to full width */
         }
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
-        input[type="text"], textarea, select {
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
-    <header class="header p-3 text-center">
-        <div class="container header-content">
-            <h1 class="text-center">Find a Ride!</h1>
+    <header class="header">
+        <div class="container header-container">
+            <h1>Find a Ride!</h1>
             <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
         </div>
     </header>
