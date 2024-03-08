@@ -1,54 +1,55 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Listings | CoTravel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha384-+qdLaqAC8oLwW8E6Dc3t/Vz2T7D+HMTqM3lF3X3eST7gduZsIun966ebhCgfk9Ig" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mt-4">
+    <h2 class="mb-4">Ride Listings</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Origination City</th>
+                    <th>Origination State</th>
+                    <th>Destination City</th>
+                    <th>Destination State</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Taking Passengers</th>
+                    <th>Seats Available</th>
+                    <th>Email Address</th>
+                    <th>Vehicle Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows populated by your Django template looping -->
+            </tbody>
+        </table>
+    </div>
 
-{% block content %}
- <div class="main">
-  <table class="table table-bordered table-hover">
-      <thead class="thead-dark">
-          <tr>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Age</th>
-              <th>Origination City</th>
-              <th>Origination State</th>
-              <th>Destination City</th>
-              <th>Destination State</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Taking Passengers</th>
-              <th>Seats Available</th>
-              <th>Email Address</th>
-              <th>Vehicle Type</th>
-          </tr>
-      </thead>
-      <tbody>
-          {% for person in people %}
-          <tr>
-              <td>{{ person.first_name }}</td>
-              <td>{{ person.last_name }}</td>
-              <td>{{ person.age }}</td>
-              <td>{{ person.origination_city }}</td>
-              <td>{{ person.origination_state }}</td>
-              <td>{{ person.destination_city }}</td>
-              <td>{{ person.destination_state }}</td>
-              <td>{{ person.date }}</td>
-              <td>{{ person.time }}</td>
-              <td>{{ person.taking_passengers }}</td>
-              <td>{{ person.seats_available }}</td>
-              <td>{{ person.email_address }}</td>
-              <td>{{ person.vehicle_type }}</td>
-          </tr>
-          {% endfor %}
-      </tbody>
-  </table>
+    <div class="my-4">
+        <form action="{% url 'rides:index' %}" method="get" onsubmit="return checkForm();" class="needs-validation" novalidate>
+            <!-- Dynamically generated form fields go here -->
+            <input type="submit" value="Submit" class="btn btn-primary mt-2">
+        </form>
+    </div>
 </div>
 
-<div class="my-4">
-    <form action="{% url 'rides:index' %}" method="get" onsubmit="return checkForm();" class="form-inline justify-content-center">
-        {{ form.as_p }}
-        <input type="submit" value="Submit" class="btn btn-primary ml-2">
-    </form>
-</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHj6/Y9gh3tyCsFbV7Xbaw0+8VAtDPfIBIPJYAM7t+O/LSHTA6Kz4rl" crossorigin="anonymous"></script>
+<script>
+    // Example function for form validation check
+    function checkForm() {
+        // Your validation logic here
+        return true; // or false
+    }
+</script>
+</body>
+</html>
 
-
-
-{% endblock %}
