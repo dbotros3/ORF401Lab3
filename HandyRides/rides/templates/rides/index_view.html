@@ -40,6 +40,15 @@
             <p>&copy; 2024 CoTravel. All rights reserved.</p>
         </footer>
     </div>
+
+    <form id="ai" class="menu-item" method="post" action="{% url'rides:ai_interaction' %}">
+        {% csrf_token %}
+        <input type="text" name="user_input">
+        <button type="submit">Submit</button>
+        </form>
+
+
+    
 </body>
     
 </html>
