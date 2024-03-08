@@ -9,7 +9,21 @@
         .header {
             background-color: #007bff;
             color: white;
-            padding: 20px 0;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .home-link {
+                order: 2;
+                margin-top: 10px;
+            }
         }
         .home-link {
             color: white;
@@ -43,9 +57,11 @@
     </style>
 </head>
 <body>
-    <header class="header text-center">
-        <h1>Find a Ride!</h1>
-        <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
+    <header class="header p-3 text-center">
+        <div class="container header-content">
+            <h1 class="mb-0">Find a Ride!</h1>
+            <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
+        </div>
     </header>
 
     <div class="container">
