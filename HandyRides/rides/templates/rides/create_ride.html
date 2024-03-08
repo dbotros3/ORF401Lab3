@@ -10,25 +10,24 @@
             background-color: #007bff;
             color: white;
         }
-        .header-container {
+        .header-content {
             display: flex;
-            justify-content: center; /* Center content */
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
-            flex-direction: column;
-            padding: 20px; /* Adjust as necessary */
         }
-        @media (min-width: 768px) {
-            .header-container {
-                flex-direction: row;
-                justify-content: space-between;
-                padding-right: 0; /* Reset padding for larger screens */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            .home-link {
+                order: 2;
+                margin-top: 10px;
             }
         }
         .home-link {
             color: white;
             text-decoration: none;
-            margin-top: 10px; /* Space below title on mobile */
         }
         form {
             max-width: 500px;
@@ -36,7 +35,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        input[type="submit"], input[type="text"], textarea, select {
+        input[type="submit"] {
             background-color: #007bff;
             color: white;
             border: none;
@@ -44,17 +43,23 @@
             margin-top: 10px;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%; /* Ensure form elements stretch to full width */
         }
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+        input[type="text"], textarea, select {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container header-container">
-            <h1>Find a Ride!</h1>
+    <header class="header p-3 text-center">
+        <div class="container header-content">
+            <h1 class="mb-0">Find a Ride!</h1>
             <a href="{% url 'rides:splash_page' %}" class="home-link">Home</a>
         </div>
     </header>
