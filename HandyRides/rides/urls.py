@@ -17,5 +17,7 @@ urlpatterns = [
     path('', views.splash_page, name='splash_page'),  # Splash page at the root URL
     path('rides/', views.index, name='index'),  # Rides listing page
     path('create/', views.create, name='create'),  # Create ride page
+    path('ai_interaction', views.ai_interaction, name='ai_interaction')
+
 
 ]
