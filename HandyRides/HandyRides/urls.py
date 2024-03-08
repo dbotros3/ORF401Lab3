@@ -23,6 +23,5 @@ from django.urls import path, include  # Make sure to import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rides.urls')),  # Include URLs from the rides app
-    path('ai_interaction', views.ai_interaction, name='ai_interaction')
     # You can include URLs from other apps here as needed
 ]
